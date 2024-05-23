@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콜백함수</title>
+
+    <script>
+      // 함수를 선언
+      function callTenTimes(callback, repeat) {
+        for (let i = 0; i < repeat; i++) {
+          callback();
+        }
+      }
+
+      function consoleTest() {
+        console.log('함수 호출');
+      }
+      callTenTimes(consoleTest, 5); // 아래 function 와 동일한 함수인데
+      // 아래는 이름없는 함수? 거기다 숫자 5는 repeat 으로할수있다.
+
+      callTenTimes(function () {
+        console.log('함수 호출');
+      }, 10);
+
+      // case3 : arrow-function 으로 대체하기
+      // callTentimes ( () => { console.log ('함수 호출')} ,
+
+      // case4 : arrow-function 으로 대체하면서 갈매기 없애기
+    </script>
+  </head>
+  <body></body>
+</html>

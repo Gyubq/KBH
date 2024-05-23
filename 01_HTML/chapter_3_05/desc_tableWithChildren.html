@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- tbody 테이블 만들떄는  생략해도되지만 부모 자손 순으로 
+    내려갈떈 > tbody > 생략하면 인식안됨    
+    그렇다면 지금 > > > > 화살표로 내려가는건 마지막 도착지만 css적용한다 이런뜻인가보다-->
+    <style>
+      table > tbody > tr > th {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- border= "n" 은 그림자 -->
+    <table border="1">
+      <tbody>
+        <tr>
+          <th>이름</th>
+          <th>지역</th>
+        </tr>
+        <tr>
+          <td>윤인성</td>
+          <td>서울특별시 강서구 내발산동</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
